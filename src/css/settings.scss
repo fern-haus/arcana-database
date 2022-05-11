@@ -1,0 +1,28 @@
+#settings-heading {
+    margin: 15px 0 0;
+}
+
+#settings {
+    max-width: 800px;
+    gap: 15px;
+    margin: auto;
+    padding: 15px;
+
+    #custom-spread,
+    #spread-type {
+        border: 1px solid black;
+        padding: 20px 10px;
+
+        h2 {
+            margin-top: 0;
+        }
+    }
+
+    #custom-spread {
+        transition: 1s;
+
+        &.inactive {
+            background-color: #ccc;
+        }
+    }
+}

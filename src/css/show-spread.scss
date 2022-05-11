@@ -1,0 +1,53 @@
+#show-spread {
+    padding: 15px;
+
+    h1 {
+        margin-top: 0;
+    }
+
+    #matching-and-opposites {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+        padding: 15px;
+
+        #matching,
+        #opposites {
+            max-width: 400px;
+            min-width: 280px;
+            border: 1px solid black;
+            flex: 1;
+            padding: 15px;
+
+            h2 {
+                margin-top: 0;
+            }
+
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                box-sizing: border-box;
+                margin-bottom: 15px;
+
+                th,
+                td {
+                    border: 1px solid black;
+                }
+
+                th {
+                    background-color: #aaa;
+
+                    &:first-child {
+                        min-width: 100px;
+                        width: 33%;
+                    }
+
+                    &.unlike {
+                        background-color: #777;
+                    }
+                }
+            }
+        }
+    }
+}

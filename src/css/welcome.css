@@ -1,0 +1,114 @@
+#welcome {
+  height: 100vh;
+  width: 100vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px;
+  position: absolute;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+#welcome.loaded {
+  top: 0;
+}
+
+#welcome.loading {
+  top: -125vh;
+}
+
+#welcome #card-container {
+  height: 85vh;
+  max-height: 700px;
+  min-height: 450px;
+  max-width: calc(700px * (350 / 600));
+  min-width: calc(450px * (350 / 600));
+  width: calc(85vh * (350 / 600));
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto;
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: 1s ease-out;
+  transition: 1s ease-out;
+}
+
+#welcome #card-container.flipped {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+#welcome #card-container #backside,
+#welcome #card-container #card-image {
+  height: 100%;
+  width: auto;
+  border: 1.25px solid #aaa;
+  border-radius: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  position: relative;
+  left: 0;
+}
+
+#welcome #card-container #backside {
+  background-color: lavender;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+  padding: 10px;
+  -webkit-transform: rotateY(180deg) translateZ(1px);
+          transform: rotateY(180deg) translateZ(1px);
+  top: -100%;
+}
+
+#welcome #card-container #backside h1 {
+  margin: 0;
+}
+
+#welcome #card-container #backside a {
+  width: 100%;
+  display: inline-block;
+}
+
+#welcome #card-container #card-image {
+  background-color: lavender;
+  padding: 10px;
+  top: 0;
+}
+
+@media only screen and (max-width: 550px) {
+  #welcome #card-container {
+    height: calc(85vw * (600 / 350));
+    width: 85vw;
+  }
+}
+/*# sourceMappingURL=welcome.css.map */

@@ -1,0 +1,31 @@
+#settings-heading {
+  margin: 15px 0 0;
+}
+
+#settings {
+  max-width: 800px;
+  gap: 15px;
+  margin: auto;
+  padding: 15px;
+}
+
+#settings #custom-spread,
+#settings #spread-type {
+  border: 1px solid black;
+  padding: 20px 10px;
+}
+
+#settings #custom-spread h2,
+#settings #spread-type h2 {
+  margin-top: 0;
+}
+
+#settings #custom-spread {
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+#settings #custom-spread.inactive {
+  background-color: #ccc;
+}
+/*# sourceMappingURL=settings.css.map */
