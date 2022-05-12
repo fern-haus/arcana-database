@@ -21,16 +21,12 @@
         }
 
         &.loading {
-            top: -125vh;
+            top: -150vh;
         }
 
         #card-container {
-            height: 70vh;
-            max-height: 700px;
-            min-height: 450px;
-            max-width: calc(700px * (350 / 600));
-            min-width: calc(450px * (350 / 600));
-            width: calc(70vh * (350 / 600));
+            height: 450px;
+            width: calc(450px * (350 / 600));
             background-color: white;
             display: flex;
             flex-direction: column;
@@ -94,12 +90,12 @@
                         display: block;
 
                         &:first-child {
-                            font-size: calc(700px * (350 / 600) / 9.25);
+                            font-size: calc(450px / 10.5);
                         }
 
                         &:last-child {
-                            font-size: calc(700px * (350 / 600) / 11.5);
-                            line-height: calc(700px * (350 / 600) / 11.5);
+                            font-size: calc(450px / 13);
+                            line-height: calc(450px / 13);
                         }
                     }
                 }
@@ -144,15 +140,6 @@
                     position: absolute;
                     top: 0;
                 }
-            }
-        }
-    }
-
-    @media only screen and (max-width: 550px) {
-        #welcome {
-            #card-container {
-                height: calc(70vw * (600 / 350));
-                width: 70vw;
             }
         }
     }
