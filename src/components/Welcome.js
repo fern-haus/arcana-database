@@ -17,32 +17,41 @@ export default function Welcome({ setIsWelcome }) {
     }
 
     function imageLoadHandler() {
-        document.getElementById("welcome").className = "loaded";
-        rotateCard();
+        setTimeout(() => {
+            document.getElementById("welcome").className = "loaded";
+            rotateCard();
+        }, 1000);
     }
 
     return (
-        <div id="welcome" className="loading">
-            <div id="card-container" className={"card-face"}>
-                <img
-                    src={cardImages[randomCardName]}
-                    id="card-image"
-                    alt={`${randomCardName} tarot card`}
-                    onLoad={() => imageLoadHandler()}
-                />
-                <div id="backside">
-                    <h1>Kard Kompare</h1>
-                    <Link to="/settings">
-                        <Button variant="contained" fullWidth>
-                            Draw Cards
-                        </Button>
-                    </Link>
-                    {/* ROUTE: */}
-                    <Link to="/about">
-                        <Button variant="contained" fullWidth>
-                            About
-                        </Button>
-                    </Link>
+        <div id="welcome-container">
+            <div id="welcome" className="loading">
+                <div id="card-container" className={"card-face"}>
+                    <div id="card-image">
+                        <img
+                            src={cardImages[randomCardName]}
+                            alt={`${randomCardName} tarot card`}
+                            onLoad={() => imageLoadHandler()}
+                        />
+                        <div id="overlay"></div>
+                    </div>
+                    <div id="backside">
+                        <h1>
+                            <span>ARCANA</span>
+                            <span>DATABASE</span>
+                        </h1>
+                        <Link to="/settings">
+                            <Button variant="contained" fullWidth>
+                                Draw Cards
+                            </Button>
+                        </Link>
+                        {/* ROUTE: */}
+                        <Link to="/about">
+                            <Button variant="contained" fullWidth>
+                                About
+                            </Button>
+                        </Link>
+                    </div>
                 </div>
             </div>
         </div>
