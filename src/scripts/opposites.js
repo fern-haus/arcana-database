@@ -1,4 +1,4 @@
-import { joiner, combineWords } from "./matching";
+import { joiner, combineWords, getKeywords } from "./matching";
 
 const allOpposites = () => ({
     yang: {
@@ -238,11 +238,13 @@ function fillAllOpposites(spread) {
     const opposites = allOpposites();
     spread.forEach((card) =>
         // go through each card and inspect words
-        card.words.forEach((word) => {
+        getKeywords(card).forEach((word) => {
             if (opposites[word]) {
                 // if word exists as a key in the top-level opposites object,
                 // add card name to that word's cards array
-                opposites[word].cards.push(card.name);
+                opposites[word].cards.push(
+                    card.name + (card.is_reversed ? " reversed" : "")
+                );
             } else {
                 Object.values(opposites)
                     // if word exists as a key under a word's lower-level

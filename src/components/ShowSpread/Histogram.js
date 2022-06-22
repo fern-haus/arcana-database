@@ -49,16 +49,20 @@ export default function Histogram({ pickedCards }) {
     function HistoTable({ names, tallied }) {
         return (
             <table>
-                <tr>
-                    {names.map((name) => (
-                        <th>{name}</th>
-                    ))}
-                </tr>
-                <tr>
-                    {names.map((name) => (
-                        <td>{tallied[name] || 0}</td>
-                    ))}
-                </tr>
+                <thead>
+                    <tr>
+                        {names.map((name) => (
+                            <th key={name}>{name}</th>
+                        ))}
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        {names.map((name) => (
+                            <td key={name}>{tallied[name] || 0}</td>
+                        ))}
+                    </tr>
+                </tbody>
             </table>
         );
     }
@@ -66,18 +70,22 @@ export default function Histogram({ pickedCards }) {
     return (
         <div id="histogram">
             <table>
-                <tr>
-                    <th>Upright</th>
-                    <th>Reversed</th>
-                    <th>Majors</th>
-                    <th>Minors</th>
-                </tr>
-                <tr>
-                    <td>{upright}</td>
-                    <td>{reversed}</td>
-                    <td>{majors}</td>
-                    <td>{minors}</td>
-                </tr>
+                <thead>
+                    <tr>
+                        <th>Upright</th>
+                        <th>Reversed</th>
+                        <th>Majors</th>
+                        <th>Minors</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{upright}</td>
+                        <td>{reversed}</td>
+                        <td>{majors}</td>
+                        <td>{minors}</td>
+                    </tr>
+                </tbody>
             </table>
             <HistoTable names={ranks} tallied={talliedRanks} />
             <HistoTable names={suits} tallied={talliedSuits} />

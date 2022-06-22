@@ -34,15 +34,18 @@ function combineWords(obj) {
     });
 }
 
+const getKeywords = (card) =>
+    card[`keywords_${card.is_reversed ? "rev" : "up"}`];
+
 function getMatching(spread) {
     const allWordsInSpread = [
-        ...new Set(spread.map((card) => card.words).flat()),
+        ...new Set(spread.map((card) => getKeywords(card)).flat()),
     ].sort();
     const result = {};
     allWordsInSpread.forEach((word) => {
         const shared = spread
-            .filter((card) => card.words.includes(word))
-            .map((card) => card.name);
+            .filter((card) => getKeywords(card).includes(word))
+            .map((card) => card.name + (card.is_reversed ? " reversed" : ""));
         if (shared.length > 1) {
             result[word] = joiner(shared);
         }
@@ -52,4 +55,4 @@ function getMatching(spread) {
 }
 
 export default getMatching;
-export { joiner, combineWords };
+export { joiner, combineWords, getKeywords };
