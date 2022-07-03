@@ -2,7 +2,7 @@ import { getCardObjectsFromNames } from "../../../scripts/cards";
 import getOpposites from "../../../scripts/opposites";
 import OpposingWord from "./OpposingWord";
 
-export default function Opposites({ pickedCards }) {
+export default function Opposites({ pickedCards, setSingle }) {
     const cardObjects = getCardObjectsFromNames(pickedCards),
         sorter = (a, b) => {
             const [aKey] = a,
@@ -27,6 +27,7 @@ export default function Opposites({ pickedCards }) {
                                 word,
                                 wordCardNames,
                                 oppositeWords,
+                                setSingle,
                             }}
                         />
                     );

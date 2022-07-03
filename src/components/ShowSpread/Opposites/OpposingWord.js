@@ -1,10 +1,23 @@
-export default function OpposingWord({ word, wordCardNames, oppositeWords }) {
+import { convertCardNames } from "../Matching/SharedWord";
+
+export default function OpposingWord({
+    word,
+    wordCardNames,
+    oppositeWords,
+    setSingle,
+}) {
     return (
         <table>
             <tbody>
                 <tr>
                     <th>{word}</th>
-                    <td>{wordCardNames}</td>
+                    <td>
+                        {convertCardNames({
+                            word,
+                            cardNames: wordCardNames,
+                            setSingle,
+                        })}
+                    </td>
                 </tr>
                 <tr>
                     <th className="unlike" colSpan={2}>
@@ -16,7 +29,13 @@ export default function OpposingWord({ word, wordCardNames, oppositeWords }) {
                     .map((word) => (
                         <tr key={`${oppositeWords} ${word}`}>
                             <th>{word}</th>
-                            <td>{oppositeWords[word]}</td>
+                            <td>
+                                {convertCardNames({
+                                    word,
+                                    cardNames: oppositeWords[word],
+                                    setSingle,
+                                })}
+                            </td>
                         </tr>
                     ))}
             </tbody>

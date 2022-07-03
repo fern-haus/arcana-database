@@ -44,8 +44,8 @@ export default function ShowSpread({ pickedCards, single, setSingle }) {
                         <p>Click on a card for more information.</p>
                         <Histogram {...{ pickedCards }} />
                         <div id="matching-and-opposites">
-                            <Matching {...{ pickedCards }} />
-                            <Opposites {...{ pickedCards }} />
+                            <Matching {...{ pickedCards, setSingle }} />
+                            <Opposites {...{ pickedCards, setSingle }} />
                         </div>
                     </>
                 )}
