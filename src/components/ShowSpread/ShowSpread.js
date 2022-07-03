@@ -18,6 +18,11 @@ export default function ShowSpread({ pickedCards, single, setSingle }) {
             <Link to="/arcana">
                 <Button variant="contained">Home</Button>
             </Link>
+            {single && (
+                <Button variant="contained" onClick={() => setSingle(null)}>
+                    Full Spread
+                </Button>
+            )}
             <div id="show-spread">
                 {single || pickedCards.length === 1 ? (
                     <CardBreakdown cardName={single || pickedCards[0]} />
