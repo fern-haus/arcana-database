@@ -37,6 +37,7 @@ const cards = [
             "nullity",
             "vanity",
         ],
+        simple_meaning: "new beginnings, new experiences, and new choices",
     },
     {
         type: "major",
@@ -81,6 +82,7 @@ const cards = [
             "unconscious mind",
             "yin",
         ],
+        simple_meaning: "confidence, control, and power",
     },
     {
         type: "major",
@@ -118,6 +120,7 @@ const cards = [
             "surface knowledge",
             "yang",
         ],
+        simple_meaning: "the mysteries of existence",
     },
     {
         type: "major",
@@ -159,6 +162,7 @@ const cards = [
             "unravelling of involved matters",
             "vacillation",
         ],
+        simple_meaning: "the female body and the material world",
     },
     {
         type: "major",
@@ -203,6 +207,7 @@ const cards = [
             "maternity",
             "obstruction",
         ],
+        simple_meaning: "rational thought",
     },
     {
         type: "major",
@@ -242,6 +247,7 @@ const cards = [
             "society",
             "weakness",
         ],
+        simple_meaning: "the spiritual world or a religious institution",
     },
     {
         type: "major",
@@ -274,6 +280,7 @@ const cards = [
             "pain",
             "solitude",
         ],
+        simple_meaning: "an intimate relationship",
     },
     {
         type: "major",
@@ -311,6 +318,7 @@ const cards = [
             "quarrels",
             "riot",
         ],
+        simple_meaning: "emotional discipline",
     },
     {
         type: "major",
@@ -349,6 +357,7 @@ const cards = [
             "physical conquest",
             "weakness",
         ],
+        simple_meaning: "determination, endurance, and fortitude of character",
     },
     {
         type: "major",
@@ -383,6 +392,7 @@ const cards = [
             "relationship",
             "unreasoned caution",
         ],
+        simple_meaning: "a wise teacher",
     },
     {
         type: "major",
@@ -406,6 +416,7 @@ const cards = [
             "vision",
         ],
         keywords_rev: ["abundance", "increase", "superfluity"],
+        simple_meaning: "the notion of fate",
     },
     {
         type: "major",
@@ -442,6 +453,7 @@ const cards = [
             "legal complications",
             "unfairness",
         ],
+        simple_meaning: "earthly laws and their consequences",
     },
     {
         type: "major",
@@ -471,6 +483,7 @@ const cards = [
             "wisdom",
         ],
         keywords_rev: ["body politic", "crowd", "expansion", "selfishness"],
+        simple_meaning: "the need to look at things in new ways",
     },
     {
         type: "major",
@@ -508,6 +521,7 @@ const cards = [
             "sleep",
             "somnambulism",
         ],
+        simple_meaning: "a dramatic transformation, usually in one's lifestyle",
     },
     {
         type: "major",
@@ -543,6 +557,7 @@ const cards = [
             "unfortunate combinations",
             "weakness",
         ],
+        simple_meaning: "moderation, compromise, and cooperation",
     },
     {
         type: "major",
@@ -585,6 +600,7 @@ const cards = [
             "strength",
             "weakness",
         ],
+        simple_meaning: "loss of control, loss of faith, or loss of hope",
     },
     {
         type: "major",
@@ -621,6 +637,7 @@ const cards = [
             "serenity",
             "tyranny",
         ],
+        simple_meaning: "physical disaster or the destruction of one's ego",
     },
     {
         type: "major",
@@ -658,6 +675,7 @@ const cards = [
             "selfishness",
             "struggle",
         ],
+        simple_meaning: "guidance, hope, and faith",
     },
     {
         type: "major",
@@ -696,6 +714,7 @@ const cards = [
             "nightmare",
             "silence",
         ],
+        simple_meaning: "deception",
     },
     {
         type: "major",
@@ -731,6 +750,7 @@ const cards = [
             "sadness",
             "selfishness",
         ],
+        simple_meaning: "success, completion, and clarity",
     },
     {
         type: "major",
@@ -761,6 +781,8 @@ const cards = [
             "simplicity",
             "weakness",
         ],
+        simple_meaning:
+            "cause-and-effect relationships and the notion of cosmic justice",
     },
     {
         type: "major",
@@ -797,6 +819,8 @@ const cards = [
             "permanence",
             "stagnation",
         ],
+        simple_meaning:
+            "a promotion to a higher position or a new level of knowledge",
     },
     {
         name: "Ace of Wands",
@@ -843,6 +867,8 @@ const cards = [
             "ruin",
             "weakness",
         ],
+        simple_meaning:
+            "the initial burst of creativity that inspires greatness",
     },
     {
         name: "2 of Wands",
@@ -896,6 +922,7 @@ const cards = [
             "trouble",
             "wonder",
         ],
+        simple_meaning: "the application of personal power",
     },
     {
         name: "3 of Wands",
@@ -949,6 +976,7 @@ const cards = [
             "toil",
             "yin",
         ],
+        simple_meaning: "success after an initial hardship",
     },
     {
         name: "4 of Wands",
@@ -995,6 +1023,8 @@ const cards = [
             "restriction",
             "struggle",
         ],
+        simple_meaning:
+            "blossoming relationships, such as marriages and childbirths",
     },
     {
         name: "5 of Wands",
@@ -1037,6 +1067,7 @@ const cards = [
             "trickery",
             "yin",
         ],
+        simple_meaning: "difficult ethical choices",
     },
     {
         name: "6 of Wands",
@@ -1075,6 +1106,8 @@ const cards = [
             "indefinite delay",
             "treachery",
         ],
+        simple_meaning:
+            "the conquest of old obstacles, usually by the successful formation of a friendship or a romantic relationship",
     },
     {
         name: "7 of Wands",
@@ -1120,6 +1153,7 @@ const cards = [
             "perplexity",
             "serenity",
         ],
+        simple_meaning: "the courage needed to defend oneself",
     },
     {
         name: "8 of Wands",
@@ -1162,6 +1196,7 @@ const cards = [
             "stingings of conscience",
             "weakness",
         ],
+        simple_meaning: "the need for quick decision-making",
     },
     {
         name: "9 of Wands",
@@ -1205,6 +1240,8 @@ const cards = [
             "obstacles",
             "weakness",
         ],
+        simple_meaning:
+            "an obstacle that must be addressed in a dynamic way with several combined solutions",
     },
     {
         name: "10 of Wands",
@@ -1243,6 +1280,8 @@ const cards = [
             "their analogies",
             "weakness",
         ],
+        simple_meaning:
+            "an overwhelming burden, such as being forced under the control of another",
     },
     {
         name: "Page of Wands",
@@ -1281,6 +1320,7 @@ const cards = [
             "indecision",
             "instability",
         ],
+        simple_meaning: "a free-spirited child with passion and enthusiasm",
     },
     {
         name: "Knight of Wands",
@@ -1328,6 +1368,7 @@ const cards = [
             "rupture",
             "yin",
         ],
+        simple_meaning: "a highly intelligent young adult",
     },
     {
         name: "Queen of Wands",
@@ -1369,6 +1410,7 @@ const cards = [
             "serviceable",
             "signifies",
         ],
+        simple_meaning: "a dominant woman",
     },
     {
         name: "King of Wands",
@@ -1406,6 +1448,7 @@ const cards = [
             "vision",
         ],
         keywords_rev: ["austere", "inexperience", "tolerant"],
+        simple_meaning: "a dominant older man, typically a leader of some kind",
     },
     {
         name: "Ace of Cups",
@@ -1451,6 +1494,7 @@ const cards = [
             "mutation",
             "revolution",
         ],
+        simple_meaning: "intuition and the initial flow of emotion",
     },
     {
         name: "2 of Cups",
@@ -1495,6 +1539,7 @@ const cards = [
             "solitude",
             "wish",
         ],
+        simple_meaning: "an emotional relationship between two people",
     },
     {
         name: "3 of Cups",
@@ -1545,6 +1590,7 @@ const cards = [
             "pleasures of the senses",
             "weakness",
         ],
+        simple_meaning: "people working together",
     },
     {
         name: "4 of Cups",
@@ -1587,6 +1633,7 @@ const cards = [
             "presage",
             "restriction",
         ],
+        simple_meaning: "complacency and taking things for granted",
     },
     {
         name: "5 of Cups",
@@ -1635,6 +1682,8 @@ const cards = [
             "optimism",
             "return",
         ],
+        simple_meaning:
+            "hidden riches despite current sadness, grief, disappointment, or regret",
     },
     {
         name: "6 of Cups",
@@ -1686,6 +1735,7 @@ const cards = [
             "renewal",
             "struggle",
         ],
+        simple_meaning: "fertility and romantic pleasure",
     },
     {
         name: "7 of Cups",
@@ -1727,6 +1777,7 @@ const cards = [
             "project",
             "will",
         ],
+        simple_meaning: "temptation and a difficult choice",
     },
     {
         name: "8 of Cups",
@@ -1761,6 +1812,7 @@ const cards = [
             "travel",
         ],
         keywords_rev: ["feasting", "great joy", "happiness", "weakness"],
+        simple_meaning: "the end of a relationship",
     },
     {
         name: "9 of Cups",
@@ -1800,6 +1852,8 @@ const cards = [
             "pain",
             "truth",
         ],
+        simple_meaning:
+            "an emotionally fulfilling situation, such as satisfying sex",
     },
     {
         name: "10 of Cups",
@@ -1842,6 +1896,7 @@ const cards = [
             "struggle",
             "violence",
         ],
+        simple_meaning: "true love and total happiness",
     },
     {
         name: "Page of Cups",
@@ -1892,6 +1947,7 @@ const cards = [
             "seduction",
             "taste",
         ],
+        simple_meaning: "a sensitive child",
     },
     {
         name: "Knight of Cups",
@@ -1945,6 +2001,7 @@ const cards = [
             "trickery",
             "yin",
         ],
+        simple_meaning: "a feminine young man",
     },
     {
         name: "Queen of Cups",
@@ -2002,6 +2059,7 @@ const cards = [
             "perverse woman",
             "vice",
         ],
+        simple_meaning: "a highly attractive woman",
     },
     {
         name: "King of Cups",
@@ -2056,6 +2114,7 @@ const cards = [
             "scandal",
             "vice",
         ],
+        simple_meaning: "a highly attractive man",
     },
     {
         name: "Ace of Swords",
@@ -2093,6 +2152,7 @@ const cards = [
             "irresponsibility",
             "multiplicity",
         ],
+        simple_meaning: "the threshold of anger",
     },
     {
         name: "2 of Swords",
@@ -2138,6 +2198,7 @@ const cards = [
             "imposture",
             "indecision",
         ],
+        simple_meaning: "a stalemate",
     },
     {
         name: "3 of Swords",
@@ -2185,6 +2246,8 @@ const cards = [
             "mental alienation",
             "pleasure",
         ],
+        simple_meaning:
+            "rejection, sadness, loneliness, heartbreak, betrayal, separation, and grief",
     },
     {
         name: "4 of Swords",
@@ -2232,6 +2295,7 @@ const cards = [
             "testament",
             "wise administration",
         ],
+        simple_meaning: "a time of rest",
     },
     {
         name: "5 of Swords",
@@ -2287,6 +2351,7 @@ const cards = [
             "success",
             "victory",
         ],
+        simple_meaning: "defeat",
     },
     {
         name: "6 of Swords",
@@ -2322,6 +2387,7 @@ const cards = [
             "way",
         ],
         keywords_rev: ["chaos", "confession", "declaration", "publicity"],
+        simple_meaning: "abandonment or escape",
     },
     {
         name: "7 of Swords",
@@ -2366,6 +2432,7 @@ const cards = [
             "slander",
             "victory",
         ],
+        simple_meaning: "a loss due to cunning and trickery",
     },
     {
         name: "8 of Swords",
@@ -2412,6 +2479,7 @@ const cards = [
             "what is unforeseen",
             "work",
         ],
+        simple_meaning: "entrapment",
     },
     {
         name: "9 of Swords",
@@ -2461,6 +2529,7 @@ const cards = [
             "sleep",
             "suspicion",
         ],
+        simple_meaning: "regret",
     },
     {
         name: "10 of Swords",
@@ -2504,6 +2573,7 @@ const cards = [
             "success",
             "victory",
         ],
+        simple_meaning: "a sudden and unexpected failure or disaster",
     },
     {
         name: "Page of Swords",
@@ -2531,6 +2601,7 @@ const cards = [
             "vigilance",
         ],
         keywords_rev: ["sickness", "unprepared state", "what is unforeseen"],
+        simple_meaning: "an aggressive child",
     },
     {
         name: "Knight of Swords",
@@ -2579,6 +2650,7 @@ const cards = [
             "passivity",
             "yin",
         ],
+        simple_meaning: "a violent young adult",
     },
     {
         name: "Queen of Swords",
@@ -2623,6 +2695,7 @@ const cards = [
             "prudery",
             "weakness",
         ],
+        simple_meaning: "a masculine woman",
     },
     {
         name: "King of Swords",
@@ -2667,6 +2740,7 @@ const cards = [
             "perversity",
             "unfairness",
         ],
+        simple_meaning: "a stoic man",
     },
     {
         name: "Ace of Pentacles",
@@ -2707,6 +2781,7 @@ const cards = [
             "great riches",
             "loss",
         ],
+        simple_meaning: "a favorable financial environment",
     },
     {
         name: "2 of Pentacles",
@@ -2748,6 +2823,7 @@ const cards = [
             "literal sense",
             "simulated enjoyment",
         ],
+        simple_meaning: "a dynamic financial environment",
     },
     {
         name: "3 of Pentacles",
@@ -2792,6 +2868,8 @@ const cards = [
             "puerility",
             "weakness",
         ],
+        simple_meaning:
+            "a job that is both emotionally and financially fulfilling",
     },
     {
         name: "4 of Pentacles",
@@ -2835,6 +2913,7 @@ const cards = [
             "suspense",
             "waste",
         ],
+        simple_meaning: "greed and selfishness",
     },
     {
         name: "5 of Pentacles",
@@ -2889,6 +2968,7 @@ const cards = [
             "thrift",
             "warmth",
         ],
+        simple_meaning: "financial loss",
     },
     {
         name: "6 of Pentacles",
@@ -2934,6 +3014,7 @@ const cards = [
             "selfishness",
             "unfairness",
         ],
+        simple_meaning: "generosity",
     },
     {
         name: "7 of Pentacles",
@@ -2971,6 +3052,7 @@ const cards = [
             "willpower",
         ],
         keywords_rev: ["failure", "loss of faith", "restriction"],
+        simple_meaning: "financial gain",
     },
     {
         name: "8 of Pentacles",
@@ -3018,6 +3100,7 @@ const cards = [
             "voided ambition",
             "weakness",
         ],
+        simple_meaning: "production and efficiency",
     },
     {
         name: "9 of Pentacles",
@@ -3056,6 +3139,7 @@ const cards = [
             "roguery",
             "voided project",
         ],
+        simple_meaning: "financial stability",
     },
     {
         name: "10 of Pentacles",
@@ -3097,6 +3181,7 @@ const cards = [
             "pension",
             "robbery",
         ],
+        simple_meaning: "affluence and philanthropy",
     },
     {
         name: "Page of Pentacles",
@@ -3136,6 +3221,7 @@ const cards = [
             "unfavourable news",
             "weakness",
         ],
+        simple_meaning: "a healthy child",
     },
     {
         name: "Knight of Pentacles",
@@ -3179,6 +3265,7 @@ const cards = [
             "stagnation",
             "yin",
         ],
+        simple_meaning: "a wealthy yet irresponsible young adult",
     },
     {
         name: "Queen of Pentacles",
@@ -3220,6 +3307,7 @@ const cards = [
             "suspense",
             "suspicion",
         ],
+        simple_meaning: "a wealthy woman",
     },
     {
         name: "King of Pentacles",
@@ -3261,6 +3349,7 @@ const cards = [
             "vice",
             "weakness",
         ],
+        simple_meaning: "an extraordinarily successful man",
     },
 ];
 

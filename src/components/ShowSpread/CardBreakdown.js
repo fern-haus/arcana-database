@@ -3,9 +3,9 @@ import SingleCard from "./SingleCard";
 
 export default function CardBreakdown({ cardName }) {
     const cardObject = { ...getCardObjectFromName(cardName) },
-        { is_reversed, type, value_int } = cardObject,
+        { is_reversed, type, value_int, simple_meaning } = cardObject,
         suffix = is_reversed ? "rev" : "up",
-        meaning = cardObject[`meaning_${suffix}`],
+        waite_meaning = cardObject[`meaning_${suffix}`],
         keywords = cardObject[`keywords_${suffix}`];
 
     return (
@@ -18,7 +18,19 @@ export default function CardBreakdown({ cardName }) {
                 <em>{type.charAt(0).toUpperCase() + type.slice(1)} Arcana</em>
             </p>
             <SingleCard {...{ cardName }} />
-            <div className="card-meaning">{meaning}</div>
+            <div className="card-meanings">
+                <p>
+                    <em>Waite's Pictorial Key to the Tarot (1910):</em>
+                    <br />
+                    {waite_meaning}
+                </p>
+                <p>
+                    <em>Simple Definition:</em>
+                    <br />
+                    {is_reversed && <>opposite of: </>}
+                    {simple_meaning}
+                </p>
+            </div>
             <ul className="card-keywords">
                 {keywords.map((keyword) => (
                     <li key={`${cardName}: ${keyword}`}>{keyword}</li>
