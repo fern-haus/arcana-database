@@ -6,6 +6,10 @@
   margin-top: 0;
 }
 
+#show-spread .single-card.clickable:hover {
+  cursor: pointer;
+}
+
 #show-spread #matching-and-opposites {
   display: -webkit-box;
   display: -ms-flexbox;

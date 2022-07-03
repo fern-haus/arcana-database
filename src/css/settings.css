@@ -4,6 +4,11 @@
 
 #settings {
   max-width: 800px;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 15px;
   margin: auto;
   padding: 15px;

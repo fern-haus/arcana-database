@@ -1,4 +1,5 @@
 import "./App.css";
+import "./css/mui.css";
 import { useCallback, useEffect, useState } from "react";
 import Settings from "./components/Settings/Settings";
 import ShowSpread from "./components/ShowSpread/ShowSpread";
@@ -7,6 +8,7 @@ import { allCardNames, flipUpright } from "./scripts/cardImages";
 function App({ showSpread }) {
     const [spreadSize, setSpreadSize] = useState(3),
         [pickedCards, setPickedCards] = useState([]),
+        [single, setSingle] = useState(null),
         [drawMajors, setDrawMajors] = useState(true),
         [drawMinors, setDrawMinors] = useState(true),
         [drawCourts, setDrawCourts] = useState(true),
@@ -38,21 +40,30 @@ function App({ showSpread }) {
     // filter the card dropdowns accordingly when toggling
     // minor arcana and court switches
     useEffect(() => {
-        const filtered = filterer();
-        setRelevantCards(["", ...filtered]);
-        setPickedCards((pickedCards) =>
-            pickedCards.map((cardName) =>
-                filtered.includes(flipUpright(cardName)) ? cardName : ""
-            )
-        );
-    }, [filterer]);
+        const filtered = filterer(),
+            relevant = ["", ...filtered];
+        if (relevant.join() !== relevantCards.join()) {
+            setRelevantCards(relevant);
+            setPickedCards((pickedCards) =>
+                pickedCards.map((cardName) =>
+                    filtered.includes(flipUpright(cardName)) ? cardName : ""
+                )
+            );
+        }
+    }, [filterer, relevantCards]);
 
     console.log(pickedCards);
 
     return (
         <div className="App">
             {showSpread ? (
-                <ShowSpread {...{ pickedCards }} />
+                <ShowSpread
+                    {...{
+                        pickedCards,
+                        single,
+                        setSingle,
+                    }}
+                />
             ) : (
                 <Settings
                     {...{
@@ -67,6 +78,7 @@ function App({ showSpread }) {
                         drawCourts,
                         setDrawCourts,
                         relevantCards,
+                        setSingle,
                     }}
                 />
             )}

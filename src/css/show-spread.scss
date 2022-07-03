@@ -5,6 +5,12 @@
         margin-top: 0;
     }
 
+    .single-card {
+        &.clickable:hover {
+            cursor: pointer;
+        }
+    }
+
     #matching-and-opposites {
         display: flex;
         flex-wrap: wrap;

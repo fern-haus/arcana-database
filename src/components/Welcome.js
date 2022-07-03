@@ -40,13 +40,13 @@ export default function Welcome({ setIsWelcome }) {
                             <span>ARCANA</span>
                             <span>DATABASE</span>
                         </h1>
-                        <Link to="/settings">
+                        <Link to="/arcana/settings">
                             <Button variant="contained" fullWidth>
                                 Draw Cards
                             </Button>
                         </Link>
                         {/* ROUTE: */}
-                        <Link to="/about">
+                        <Link to="/arcana/about">
                             <Button variant="contained" fullWidth>
                                 About
                             </Button>

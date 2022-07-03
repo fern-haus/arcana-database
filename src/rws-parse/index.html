@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="display-card"></div>
+        <script src="data.js"></script>
+        <script src="matching.js"></script>
+        <script src="spread.js"></script>
+        <script src="opposites.js"></script>
+        <script>
+            const allMatches = getAllMatches(data),
+                spread = getSpread(data, 10, allMatches),
+                opposites = getOpposites(spread);
+
+            displayHTML(spread);
+
+            function displayHTML(spread) {
+                const display = document.getElementById("display-card");
+                display.innerHTML = `
+                    <div class="spread">
+                        ${spread.cards
+                            .map(
+                                (card) => `
+                                    <div class="card">
+                                        <img src="https://fern.haus/images/tarot/${
+                                            card.is_reversed
+                                                ? "reversed"
+                                                : "upright"
+                                        }/${card.name}.jpg" />
+                                        <h3>
+                                            ${
+                                                card.name +
+                                                (card.is_reversed
+                                                    ? " reversed"
+                                                    : "")
+                                            }
+                                        </h3>
+                                        <p>
+                                            <em>
+                                                ${
+                                                    card[
+                                                        `meaning_${
+                                                            card.is_reversed
+                                                                ? "rev"
+                                                                : "up"
+                                                        }`
+                                                    ]
+                                                }
+                                            </em>
+                                        </p>
+                                        <p>${card.desc}</p>
+                                        <p><em><u>KEYWORDS</u>:
+                                            <br/>
+                                            ${card.keywords.sort().join(", ")}
+                                        </em></p>
+                                    </div>`
+                            )
+                            .join("")}
+                        </div>
+                    <hr/>
+                    ${[...spread.matches.entries()]
+                        .map(
+                            ([item, cards]) =>
+                                `<h4>${item}</h4>
+                            <ul>${cards
+                                .map((card) => `<li>${card}</li>`)
+                                .join("")}</ul>`
+                        )
+                        .join("")}
+                    <hr/>
+                    <pre>${JSON.stringify(opposites, null, 4)}</pre>`;
+            }
+        </script>
+    </body>
+</html>

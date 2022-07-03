@@ -20,6 +20,7 @@ export default function Settings({
     drawCourts,
     setDrawCourts,
     relevantCards,
+    setSingle,
 }) {
     const [isCustom, setIsCustom] = useState(true);
 
@@ -62,13 +63,14 @@ export default function Settings({
             ];
         }
         result = isCustom && result.length ? result : getRandomSpread();
+        setSingle(null);
         setPickedCards(result);
         setSpreadSize(result.length < 3 ? 3 : result.length);
     }
 
     return (
         <>
-            <Link to="/">
+            <Link to="/arcana">
                 <Button variant="contained">Home</Button>
             </Link>
             <h1 id="settings-heading">Spread Settings</h1>
@@ -96,7 +98,7 @@ export default function Settings({
                     }}
                 />
             </Box>
-            <Link to="/spread">
+            <Link to="/arcana/spread">
                 <Button
                     variant="contained"
                     onClick={drawCardsHandler}

@@ -37,8 +37,6 @@ function combineWords(obj) {
 const getKeywords = (card) =>
     card[`keywords_${card.is_reversed ? "rev" : "up"}`];
 
-console.log("small change");
-
 function getMatching(spread) {
     const allWordsInSpread = [
         ...new Set(spread.map((card) => getKeywords(card)).flat()),

@@ -3276,4 +3276,4 @@ const getCardObjectsFromNames = (cardNames) =>
     cardNames.map((cardName) => getCardObjectFromName(cardName));
 
 export default cards;
-export { getCardObjectsFromNames };
+export { getCardObjectFromName, getCardObjectsFromNames };

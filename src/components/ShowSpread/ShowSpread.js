@@ -5,28 +5,45 @@ import SingleCard from "./SingleCard";
 import Histogram from "./Histogram";
 import Matching from "./Matching/Matching";
 import Opposites from "./Opposites/Opposites";
+import CardBreakdown from "./CardBreakdown";
 
-export default function ShowSpread({ pickedCards }) {
+export default function ShowSpread({ pickedCards, single, setSingle }) {
+    window.scrollTo(0, 0);
+
     return (
         <>
-            <Link to="/settings">
+            <Link to="/arcana/settings">
                 <Button variant="contained">New Spread</Button>
             </Link>
-            <Link to="/">
+            <Link to="/arcana">
                 <Button variant="contained">Home</Button>
             </Link>
             <div id="show-spread">
-                <h1>Spread</h1>
-                {pickedCards.map((cardName) => (
-                    <SingleCard
-                        {...{ key: `card image for ${cardName}`, cardName }}
-                    />
-                ))}
-                <Histogram {...{ pickedCards }} />
-                <div id="matching-and-opposites">
-                    <Matching {...{ pickedCards }} />
-                    <Opposites {...{ pickedCards }} />
-                </div>
+                {single || pickedCards.length === 1 ? (
+                    <CardBreakdown cardName={single || pickedCards[0]} />
+                ) : (
+                    <>
+                        <h1>Spread</h1>
+                        {pickedCards.map((cardName) => (
+                            <SingleCard
+                                {...{
+                                    key: `card image for ${cardName}`,
+                                    cardName,
+                                    onClick:
+                                        pickedCards.length > 1
+                                            ? () => setSingle(cardName)
+                                            : null,
+                                }}
+                            />
+                        ))}
+                        <p>Click on a card for more information.</p>
+                        <Histogram {...{ pickedCards }} />
+                        <div id="matching-and-opposites">
+                            <Matching {...{ pickedCards }} />
+                            <Opposites {...{ pickedCards }} />
+                        </div>
+                    </>
+                )}
             </div>
         </>
     );
