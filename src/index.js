@@ -10,16 +10,20 @@ import About from "./components/About";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
-    <React.StrictMode>
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<Welcome />} />
-                <Route path="settings" element={<App showSpread={false} />} />
-                <Route path="spread" element={<App showSpread={true} />} />
-                <Route path="about" element={<About />} />
-            </Routes>
-        </BrowserRouter>
-    </React.StrictMode>
+    // Strict Mode may cause double component render:
+    // <React.StrictMode>
+    <BrowserRouter>
+        <Routes>
+            <Route path="/arcana" element={<Welcome />} />
+            <Route
+                path="/arcana/settings"
+                element={<App showSpread={false} />}
+            />
+            <Route path="/arcana/spread" element={<App showSpread={true} />} />
+            <Route path="/arcana/about" element={<About />} />
+        </Routes>
+    </BrowserRouter>
+    // </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

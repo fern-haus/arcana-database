@@ -1,9 +1,13 @@
 import { Card, CardContent } from "@mui/material";
 import cardImages, { flipUpright } from "../../scripts/cardImages";
 
-export default function SingleCard({ cardName, isWelcome }) {
+export default function SingleCard({ cardName, onClick }) {
     return (
-        <Card sx={{ width: "fit-content", display: "inline-block" }}>
+        <Card
+            className={`single-card ${onClick ? "clickable" : ""}`}
+            sx={{ width: "fit-content", display: "inline-block" }}
+            onClick={onClick}
+        >
             {/* <CardHeader title={cardName} /> */}
             <CardContent>
                 <img

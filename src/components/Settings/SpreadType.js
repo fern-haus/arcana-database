@@ -32,8 +32,8 @@ export default function SpreadType({
                         onChange: (e) => setSpreadSize(+e.target.value),
                     }}
                 >
-                    {new Array(9).fill(0).map((_, i) => {
-                        const size = i + 2;
+                    {new Array(10).fill(0).map((_, i) => {
+                        const size = i + 1;
                         return (
                             <option key={`spread-size-${size}`} value={size}>
                                 {size}

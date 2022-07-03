@@ -4,6 +4,8 @@
 
 #settings {
     max-width: 800px;
+    display: flex !important;
+    flex-wrap: wrap;
     gap: 15px;
     margin: auto;
     padding: 15px;
